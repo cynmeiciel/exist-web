@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: exist-web-backend
+    runtime: python
+    buildCommand: |
+      git submodule update --init --recursive
+      pip install -e ./CynMeith
+      pip install -e .
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
