@@ -1,0 +1,3 @@
+[submodule "CynMeith"]
+	path = CynMeith
+	url = https://github.com/cynmeiciel/CynMeith.git
